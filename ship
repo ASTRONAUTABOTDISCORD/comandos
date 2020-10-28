@@ -1,0 +1,22 @@
+const Discord = require('discord.js')
+
+exports.run = async(Client, message, args){
+
+ var list = [
+    'Eita esses dois não funcionam de jeito nenhum',
+    'Caramba, só digo para usar camisinha',
+    'mais ou menos, sabe?',
+    'que casal lindo'
+  ];
+  
+  var rand = list[Math.floor(Math.random() * list.length)];
+  
+ 
+
+  let embed = new Discord.MessageEmbed()
+  .setTitle("Mais um ship, vamos ver ")
+  .setDescription(`${message.author.username} shipou ${message.mentions.users.first()} com ${message.mentions.users.last()}
+   será que esse amor vai durar? ${rand}`)
+  
+  .setColor("RANDOM")
+  message.channel.send(embed)}
